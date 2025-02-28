@@ -20,6 +20,15 @@ const Home = () => {
   } = useChat();
   const noMessages = true;
 
+  const handlePrompt = (promptText) => {
+    const message: Message = {
+      id: crypto.randomUUID(),
+      content: promptText,
+      role: "user",
+    };
+    append(message);
+  };
+
   return (
     <main className="flex flex-col gap-4 justify-center items-center min-h-screen bg-zinc-100">
       <section className="flex flex-col gap-2 justify-center items-center bg-white rounded-xl px-10 py-10 shadow">
@@ -31,7 +40,7 @@ const Home = () => {
               data!
             </p>
             <br />
-            <PromptSuggestionRpw />
+            <PromptSuggestionRpw onPromptClick={handlePrompt} />
           </>
         ) : (
           <>
