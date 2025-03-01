@@ -1,3 +1,5 @@
+if we don't want strict TS when can set "false" in tsconfig
+
 https://www.youtube.com/watch?v=d-VKYF4Zow0&t=1816s
 
 Setup our next project - delete the main directories and custom build our own
@@ -22,3 +24,9 @@ set sample data
 Create Scraping Function with Puppeteer
 
 Call collection function and chain .then loadSampleData
+
+Scraping data
+
+1. We scrape
+2. We chunk it up
+3. We send these vectors to our DB

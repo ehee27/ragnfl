@@ -18,7 +18,7 @@ const Home = () => {
     handleInputChange,
     handleSubmit,
   } = useChat();
-  const noMessages = true;
+  const noMessages = !messages || messages.length === 0;
 
   const handlePrompt = (promptText) => {
     const message: Message = {

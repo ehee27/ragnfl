@@ -86,3 +86,14 @@ export async function POST(req: Request) {
     throw error;
   }
 }
+
+// initial method using depricated tools
+// import { OpenAIStream, StreamingTextResponse } from "ai";
+// const response = await openaiClient.chat.completions.create({
+//   model: "gpt-4",
+//   stream: true,
+//   messages: [template, ...messages],
+// });
+
+// const stream = OpenAIStream(response);
+// return new StreamingTextResponse(stream);

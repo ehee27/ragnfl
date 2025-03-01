@@ -1,6 +1,9 @@
 const PromptSuggestionButton = ({ onClick, text }) => {
   return (
-    <button className="rounded-xl p-2 bg-sky-600 text-white" onClick={onClick}>
+    <button
+      className="rounded-xl p-2 bg-zinc-300 text-white shadow shadow-zinc-500"
+      onClick={onClick}
+    >
       {text}
     </button>
   );

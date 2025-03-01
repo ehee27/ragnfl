@@ -7,7 +7,7 @@ const PromptSuggestionRpw = ({ onPromptClick }) => {
     "Who has used the franchise tag?",
   ];
   return (
-    <div className="flex flex-col justify-center items-center p-3 g-zinc-400 text-zinc-800">
+    <div className="flex flex-col gap-2 justify-center items-center p-3 g-zinc-400 text-zinc-800">
       {prompts.map((prompt, i) => (
         <PromptSuggestionButton
           key={`suggestion-${i}`}
