@@ -50,7 +50,7 @@ const Home = () => {
           RAG NFL
         </h1>
       </header>
-      <section className="flex flex-col gap-4 justify-center items-center bg-white rounded-xl px-10 py-10 shadow shadow-zinc-400">
+      <section className="flex flex-col gap-4 justify-center items-center bg-white rounded-xl px-10 py-10 shadow shadow-zinc-300">
         <p className="text-sm text-zinc-500">
           This RAG App has been trained on NFL free agency. It understands the
           overall framework, rules and timeframes of the process. It's also up
@@ -62,13 +62,13 @@ const Home = () => {
           onSubmit={handleSubmit}
         >
           <input
-            className="rounded-md px-5 py-2 border-zinc-100 w-[75%] shadow-inner shadow-zinc-400"
+            className="rounded-md px-5 py-2 border-zinc-100 w-[75%] shadow-inner shadow-zinc-400 text-zinc-500"
             onChange={handleInputChange}
             value={input}
             placeholder="Let's rap about free agency..."
           />
           <Button
-            className="rounded-md bg-blue-400 text-white w-[25%] h-[100%] shadow shadow-zinc-400 hover:bg-blue-600 hover:cursor-pointer transition-all duration-200"
+            className="rounded-md bg-blue-900 text-white w-[25%] h-[100%] shadow shadow-zinc-500 hover:bg-blue-700 hover:cursor-pointer transition-all duration-200"
             type="submit"
           >
             Submit
@@ -80,25 +80,25 @@ const Home = () => {
           ref={chatParent}
           className="h-1 p-4 flex-grow rounded-lg overflow-y-auto flex flex-col gap-4"
         >
-          {messages.map((m, index) => (
-            <>
-              {m.role === "user" ? (
-                <li key={index} className="flex flex-row">
-                  <div className="rounded-xl p-4 bg-background shadow-md flex">
-                    <p className="text-zinc-500 text-sm">{m.content}</p>
+          {messages?.map((message, i) => (
+            <div key={message.id}>
+              {message.role === "user" ? (
+                <li className="flex flex-row">
+                  <div className="flex rounded-xl p-3 bg-white shadow shadow-zinc-300">
+                    <p className="text-zinc-500 text-sm">{message.content}</p>
                   </div>
                 </li>
               ) : (
-                <li key={index} className="flex flex-row-reverse">
-                  <div className="rounded-xl p-4 bg-background shadow-md flex w-3/4">
+                <li className="flex flex-row-reverse">
+                  <div className="flex rounded-xl p-3 bg-white shadow shadow-zinc-300 w-3/4">
                     <p className="text-zinc-500 text-sm">
-                      <span className="font-bold text-green-700">Answer: </span>
-                      {m.content}
+                      <span className="font-bold text-blue-700">Answer: </span>
+                      {message.content}
                     </p>
                   </div>
                 </li>
               )}
-            </>
+            </div>
           ))}
         </ul>
       </section>
@@ -108,15 +108,40 @@ const Home = () => {
 
 export default Home;
 
-/* <section className="container px-0 pb-10 flex flex-col flex-grow gap-4 mx-auto max-w-3xl">
-        {noMessages ? (
-          <></>
-        ) : (
-          <>
-            {messages.map((message, i) => (
-              <Bubble key={`message-${i}`} message={message} />
-            ))}
-            {isLoading && <Loading />}
-          </>
-        )}
-      </section> */
+{
+  /* <section className="container px-0 pb-10 flex flex-col flex-grow gap-4 mx-auto max-w-3xl">
+  {noMessages ? (
+    <></>
+  ) : (
+    <>
+      {messages.map((message, i) => (
+        <Bubble key={`message-${i}`} message={message} />
+      ))}
+      {isLoading && <Loading />}
+    </>
+  )}
+</section>;
+
+{
+  messages.map((m, i) => (
+    <>
+      {m.role === "user" ? (
+        <li key={m.id} className="flex flex-row">
+          <div className="rounded-xl p-4 bg-background shadow-md flex">
+            <p className="text-zinc-500 text-sm">{m.content}</p>
+          </div>
+        </li>
+      ) : (
+        <li key={m.id} className="flex flex-row-reverse">
+          <div className="rounded-xl p-4 bg-background shadow-md flex w-3/4">
+            <p className="text-zinc-500 text-sm">
+              <span className="font-bold text-green-700">Answer: </span>
+              {m.content}
+            </p>
+          </div>
+        </li>
+      )}
+    </>
+  ));
+} */
+}
