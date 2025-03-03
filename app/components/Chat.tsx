@@ -39,7 +39,7 @@ const Chat = () => {
           ref={chatParent}
           className="h-1 p-4 flex-grow rounded-lg overflow-y-auto flex flex-col gap-4"
         >
-          {messages?.map((message, i) => (
+          {messages?.map((message) => (
             <div key={message.id}>
               {message.role === "user" ? (
                 <li className="flex flex-row">

@@ -3,7 +3,6 @@
 // sending data from our DB and using openai to make it readable
 import OpenAI from "openai";
 import { streamText } from "ai";
-import { createOpenAI } from "@ai-sdk/openai";
 import { DataAPIClient } from "@datastax/astra-db-ts";
 import { openai } from "@ai-sdk/openai";
 
