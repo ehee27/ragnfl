@@ -8,7 +8,7 @@ import Footer from "./components/Footer";
 const Home = () => {
   return (
     <main className="flex flex-col mx-auto max-w-5xl px-2 md:px-10 h-screen max-h-dvh bg-zinc-100">
-      <header className="flex items-center py-2 px-1 w-full mx-auto">
+      <header className="flex items-center py-2 px-1 w-full mx-auto mt-3">
         <Image src={logo} alt="RAG NFL logo" className="w-15 md:w-30" />
         <h1 className="text-3xl md:text-5xl text-zinc-600 font-bold font-audiowide">
           NFL RAG
