@@ -1,3 +1,5 @@
+"use server";
+
 // she had originally used OpenAIStream and StreamingTestResponse to stream our final response however those were depricated. I've used "streamText" and had to modify the final response. I'll leave her methods commented out. Also had to update initial OpenAI instance to openaiClient as to not conflict with the module import {openai} from "@ai-sdk/openai"
 
 // sending data from our DB and using openai to make it readable
@@ -11,14 +13,12 @@ const {
   ASTRA_DB_COLLECTION,
   ASTRA_DB_API_ENDPOINT,
   ASTRA_DB_APPLICATION_TOKEN,
-  // OPENAI_API_KEY,
+  OPENAI_API_KEY,
 } = process.env;
 
 // connect to openai
 const openaiClient = new OpenAI({
-  // apiKey: OPENAI_API_KEY,
-  apiKey:
-    "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",
+  apiKey: OPENAI_API_KEY,
 });
 // connect to our DB
 const client = new DataAPIClient(ASTRA_DB_APPLICATION_TOKEN); // constructor
