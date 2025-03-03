@@ -11,12 +11,14 @@ const {
   ASTRA_DB_COLLECTION,
   ASTRA_DB_API_ENDPOINT,
   ASTRA_DB_APPLICATION_TOKEN,
-  OPENAI_API_KEY,
+  // OPENAI_API_KEY,
 } = process.env;
 
 // connect to openai
 const openaiClient = new OpenAI({
-  apiKey: OPENAI_API_KEY,
+  // apiKey: OPENAI_API_KEY,
+  apiKey:
+    "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",
 });
 // connect to our DB
 const client = new DataAPIClient(ASTRA_DB_APPLICATION_TOKEN); // constructor
