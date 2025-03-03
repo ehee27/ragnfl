@@ -1,7 +1,7 @@
 import "./globals.css";
 
 export const metadata = {
-  title: "RAG-NFL",
+  title: "NFL RAG App | Scott Lucas",
   description: "A RAG app with custom NFL Data",
 };
 

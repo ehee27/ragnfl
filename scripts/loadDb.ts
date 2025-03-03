@@ -22,10 +22,16 @@ const openai = new OpenAI({ apiKey: OPENAI_API_KEY });
 const nflData = [
   "https://en.wikipedia.org/wiki/National_Football_League",
   "https://www.espn.com/nfl/nfl-free-agency/",
+  "https://www.espn.com/nfl/insider/story/_/id/44039013/2025-nfl-offseason-one-free-agent-every-team-sign-afc-nfc-picks",
   "https://www.espn.com/nfl/insider/story/_/id/44038857/2025-nfl-offseason-trade-offers-stafford-kupp-deebo-landry-godchaux-allen-jackson",
   "https://www.espn.com/nfl/story/_/id/43812803/2025-nfl-franchise-tag-tracker-kansas-city-chiefs-tag-pro-bowl-guard-trey-smith",
   "https://www.espn.com/nfl/story/_/id/43996011/32-players-move-teams-2025-offseason-trade-free-agency",
   "https://www.espn.com/nfl/insider/story/_/id/43860621/2025-nfl-free-agency-best-team-fits-ranking-top-50-players-available-offseason",
+  "https://www.espn.com/nfl/insider/story/_/id/44068534/2025-nfl-combine-latest-buzz-news-rumors-free-agency-draft-trades",
+  "https://www.nfl.com/news/2025-nfl-combine-stock-up-stock-down-day-3",
+  "https://www.espn.com/nfl/insider/story/_/id/43979042/2025-nfl-free-agency-best-players-available-offense-contract-tiers-market-barnwell",
+  "https://www.espn.com/nfl/draft2025/insider/story/_/id/44031875/2025-nfl-combine-top-draft-prospects-workouts-risers-40-every-position",
+  "https://operations.nfl.com/updates/football-ops/2024-nfl-free-agency-questions-answers/",
 ];
 
 // connect to our DB

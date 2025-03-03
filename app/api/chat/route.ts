@@ -1,4 +1,4 @@
-// she had originally used OpenATStream and StreamingTestResponse to stream our final response however those were depricated. I've used "streamText" and had to modify the final response. I'll leave her methods commented out. Also had to update initial OpenAI instance to openaiClient as to not conflict with the module import {openai} from "@ai-sdk/openai"
+// she had originally used OpenAIStream and StreamingTestResponse to stream our final response however those were depricated. I've used "streamText" and had to modify the final response. I'll leave her methods commented out. Also had to update initial OpenAI instance to openaiClient as to not conflict with the module import {openai} from "@ai-sdk/openai"
 
 // sending data from our DB and using openai to make it readable
 import OpenAI from "openai";
@@ -47,7 +47,7 @@ export async function POST(req: Request) {
       // find the similar data to whatever our recentMessage asked
       const matchingData = collection.find(null, {
         sort: {
-          $vector: embedding.data[0].embedding,
+          $vector: embedding.data[0].embedding, // grab the first data match
         },
         limit: 10,
       });
