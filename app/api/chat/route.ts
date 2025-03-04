@@ -13,12 +13,14 @@ const {
   ASTRA_DB_COLLECTION,
   ASTRA_DB_API_ENDPOINT,
   ASTRA_DB_APPLICATION_TOKEN,
-  OPENAI_API_KEY,
+  NEXT_PUBLIC_OPENAI_API_KEY,
+  // OPENAI_API_KEY,
 } = process.env;
 
 // connect to openai
 const openaiClient = new OpenAI({
-  apiKey: OPENAI_API_KEY,
+  apiKey: NEXT_PUBLIC_OPENAI_API_KEY,
+  // apiKey: OPENAI_API_KEY,
 });
 // connect to our DB
 const client = new DataAPIClient(ASTRA_DB_APPLICATION_TOKEN); // constructor
